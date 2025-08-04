@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:vault_history_frontend/features/home/presentation/screens/home_screen.dart';
+
 class VaultHistoryApp extends StatelessWidget {
   const VaultHistoryApp({super.key});
 
@@ -11,11 +13,9 @@ class VaultHistoryApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scaffold( // Uma tela em branco temporária
-        body: Center(
-          child: Text('Bem-vindo ao Vault History!'),
-        ),
-      ),
+        home: const HomeScreen(), // Temporariamente mostrando a tela principal
+      // Na Tarefa 2.4, substituiremos por um Consumer/Provider que decidirá
+      // qual tela mostrar baseado no estado
     );
   }
 }
